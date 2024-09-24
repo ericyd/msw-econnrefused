@@ -1,16 +1,16 @@
 <script setup lang='ts'>
 import { onMounted, ref } from 'vue';
 
-const data = ref('');
-
 onMounted(async () => {
-  const response = await fetch('http://localhost:8000/account')
-  data.value = await response.text()
+  await fetch('http://localhost:8000/account')
+  await fetch('http://localhost:8000/user')
+  await fetch('http://localhost:8000/account')
+  await fetch('http://localhost:8000/user')
 })
+
 </script>
 
 <template>
   <pre>
-    {{ data }}
   </pre>
 </template>
