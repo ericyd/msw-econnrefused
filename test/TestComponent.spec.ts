@@ -8,12 +8,16 @@ describe('TestComponent', () => {
     const wrapper = mount(TestComponent)
 
     await flushPromises()
+    await flushPromises()
 
     expect(wrapper.find('pre').exists()).toBe(true)
   }))
 
   it('test 2', server.boundary(async () => {
     const wrapper = mount(TestComponent)
+
+    await flushPromises()
+    await flushPromises()
 
     expect(wrapper.find('pre').exists()).toBe(true)
   }))
